@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SplashActivity">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="47dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="WELCOME TO"
+        android:textColor="#000793"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/apptifier"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#2CC4A8"
+        android:layout_marginStart="105dp"
+        android:textSize="35sp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/welcome"
+        app:layout_constraintStart_toStartOf="@id/welcome"
+        app:layout_constraintEnd_toEndOf="@id/welcome"
+        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        android:text="QUIZ APP"
+        android:layout_height="wrap_content"/>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/apptifier"
+        android:layout_marginTop="5dp"
+        android:padding="8dp"
+        android:outlineAmbientShadowColor="@color/purple_500"
+        android:outlineSpotShadowColor="@color/purple_500"
+        android:scaleType="centerCrop"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/a" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/progressb"
+        android:layout_centerHorizontal="true"
+        android:text="0 %"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:visibility="gone">
+
+    </TextView>
+
+    <ProgressBar
+        android:id="@+id/progressb"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:visibility="gone">
+
+    </ProgressBar>
+
+</RelativeLayout>
